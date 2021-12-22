@@ -1,7 +1,7 @@
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-  purge: [],
+  purge: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   presets: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -15,18 +15,20 @@ module.exports = {
     colors: {
       transparent: "transparent",
       current: "currentColor",
-      primary: "rgb(255, 115, 97)",
-      "light-gray": "rgba(0,0,0,.5)",
-      "light-gray-1": "rgba(0,0,0,.9)",
-      "gray-dark": "#2f3239",
+      main: "#fcc82c",
+      secondary: "#465a05",
 
-      black: colors.black,
+      black: { ...colors.black, 100: "rgba(15,23,42,var(--tw-bg-opacity))" },
       white: colors.white,
-      gray: colors.coolGray,
+      gray: {
+        ...colors.coolGray,
+        100: "rgb(102 102 102 / 50%)",
+        200: "rgb(1 19 5 / 20%)",
+      },
       red: colors.red,
       yellow: colors.amber,
-      green: colors.emerald,
-      blue: colors.blue,
+      green: { ...colors.emerald, 100: "#475b06" },
+      blue: { ...colors.blue, 100: "rgba(59,130,246,var(--tw-text-opacity))" },
       indigo: colors.indigo,
       purple: colors.violet,
       pink: colors.pink,
@@ -52,6 +54,8 @@ module.exports = {
       12: "3rem",
       14: "3.5rem",
       16: "4rem",
+      18: "4.5rem",
+      19: "4.7rem",
       20: "5rem",
       24: "6rem",
       28: "7rem",
@@ -168,9 +172,12 @@ module.exports = {
       sm: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
       DEFAULT:
         "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
-      md: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-      lg: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
-      xl: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+      md:
+        "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+      lg:
+        "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+      xl:
+        "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
       "2xl": "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
       inner: "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)",
       none: "none",
@@ -287,12 +294,14 @@ module.exports = {
       ],
     },
     fontSize: {
+      "2xs": ["0.65rem", { lineHeight: "1rem" }],
       xs: ["0.75rem", { lineHeight: "1rem" }],
       sm: ["0.875rem", { lineHeight: "1.25rem" }],
       base: ["1rem", { lineHeight: "1.5rem" }],
       lg: ["1.125rem", { lineHeight: "1.75rem" }],
       xl: ["1.25rem", { lineHeight: "1.75rem" }],
       "2xl": ["1.5rem", { lineHeight: "2rem" }],
+      "2.5xl": ["1.6rem", { lineHeight: "2rem" }],
       "3xl": ["1.875rem", { lineHeight: "2.25rem" }],
       "4xl": ["2.25rem", { lineHeight: "2.5rem" }],
       "5xl": ["3rem", { lineHeight: "1" }],
@@ -533,6 +542,7 @@ module.exports = {
     maxHeight: (theme) => ({
       ...theme("spacing"),
       full: "100%",
+      "60vh": "60vh",
       screen: "100vh",
     }),
     maxWidth: (theme, { breakpoints }) => ({

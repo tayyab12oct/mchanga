@@ -1238,7 +1238,7 @@ ul.fancy-list li:before {
     top: 9px;
 }
 
-.tabs-resources>ul>li>a {
+.tabs-resources>ul>li a {
     height: 50px !important;
     line-height: 50px !important;
     background-color: transparent !important;
@@ -1250,10 +1250,22 @@ ul.fancy-list li:before {
     top: 0 !important;
 }
 
-.tabs-resources>ul>li.ui-tabs-active>a {
+.tabs-resources ul.tab-nav:not(.tab-nav-lg) li {
+    height: 40px !important;
+    line-height: 50px !important;
+    /* background-color: transparent !important; */
+    font-family: 'museo_sans_rounded900';
+    /* color: rgb(102 102 102 / 50%) !important; */
+    font-size: 14px;
+    transition: all .2s;
+    border-radius: 99px;
+    top: 0 !important;
+}
+
+/* .tabs-resources>ul>li.ui-tabs-active {
     background-color: #fcc82c !important;
     color: #465a05 !important;
-}
+} */
 
 .resources-feature-item {
     position: relative;
@@ -1469,14 +1481,12 @@ ul.fancy-list li:before {
     border-right: none;
 }
 
-.side-tabs ul.tab-nav li a {
+.side-tabs ul.tab-nav li {
     font-family: 'museo_sans_rounded900';
     font-weight: normal;
     font-size: 22px;
-    color: #989898;
     height: 63px;
     line-height: 63px;
-    background-color: transparent;
     position: relative;
     padding: 0 16px;
 }
@@ -1489,7 +1499,7 @@ ul.fancy-list li:before {
     border-bottom: none !important;
 }
 
-.side-tabs ul.tab-nav li.ui-tabs-active a {
+.side-tabs ul.tab-nav li.ui-tabs-active {
     background-color: #fcc82c;
     right: 0;
     color: #475b06;
@@ -1504,7 +1514,7 @@ ul.fancy-list li:before {
     opacity: 0;
 }
 
-.side-tabs ul.tab-nav li.ui-tabs-active a i {
+.side-tabs ul.tab-nav li.ui-tabs-active i {
     opacity: 1;
 }
 
@@ -2457,12 +2467,12 @@ a.gallery-item>img {
         border-radius: 10px;
     }
 
-    .post-item-wrapper .post-footer {
+    /* .post-item-wrapper .post-footer {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
         padding: 0;
-    }
+    } */
 
     .post-item-wrapper .meta-social a {
         margin-left: 0;

@@ -1,8 +1,8 @@
 <template>
-  <div id="top-bar">
+  <div id="top-bar" class="bg-white">
     <div class="container clearfix">
       <div class="topbar-content flex items-center">
-        <div class="header-social-wrap pt-2">
+        <div class="header-social-wrap pt-2.5">
           <router-link to="/">
             <img src="@/assets/images/facebook.png" />
           </router-link>
@@ -19,7 +19,7 @@
             <img src="@/assets/images/instagram.png" />
           </router-link>
         </div>
-        <div class="header-contact-wrap">
+        <div class="header-contact-wrap -mt-1">
           <div class="contact-item">
             <img src="@/assets/images/ic-phone.png" /><span>020 765 0919</span>
           </div>

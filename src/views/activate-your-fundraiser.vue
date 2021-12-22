@@ -36,7 +36,7 @@
                   <div class="form-submit center flex justify-center">
                     <a href="#" class="button">Click Here</a>
                   </div>
-                  <p>
+                  <p class="text-xs md:text-base">
                     OR copy below to your browser
                     <br />https://secure.changa.co.ke/myweb/share/48741
                   </p>

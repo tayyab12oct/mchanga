@@ -31,7 +31,9 @@
                       maxlength="35"
                       name=""
                     />
-                    <div class="text-right"><span>0</span>/35</div>
+                    <div class="text-right text-xs md:text-base">
+                      <span>0</span>/35
+                    </div>
                   </div>
                   <div class="form-group">
                     <select class="form-control">

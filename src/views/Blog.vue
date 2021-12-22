@@ -11,341 +11,113 @@
           <div class="tabs justified-tabs about-sub-nav tabs-blog clearfix">
             <div class="container">
               <ul class="tab-nav clearfix">
-                <li><a href="#tab-blog-1">Fundraiser Stories</a></li>
-                <li><a href="#tab-blog-2">M-Changa Tips</a></li>
-                <li><a href="#tab-blog-3">Featured Press</a></li>
-                <li><a href="#tab-blog-4">Changa TV</a></li>
+                <li
+                  class="cursor-pointer px-3"
+                  v-on:click="toggleTabs(1)"
+                  v-bind:class="{
+                    'bg-transparent': openTab !== 1,
+                    'bg-white': openTab === 1,
+                  }"
+                >
+                  Fundraiser Stories
+                </li>
+                <li
+                  class="cursor-pointer px-3"
+                  v-on:click="toggleTabs(2)"
+                  v-bind:class="{
+                    'bg-main': openTab !== 2,
+                    'bg-white': openTab === 2,
+                  }"
+                >
+                  M-Changa Tips
+                </li>
+                <li
+                  class="cursor-pointer px-3"
+                  v-on:click="toggleTabs(3)"
+                  v-bind:class="{
+                    'bg-main': openTab !== 3,
+                    'bg-white': openTab === 3,
+                  }"
+                >
+                  Featured Press
+                </li>
+                <li
+                  class="cursor-pointer px-3"
+                  v-on:click="toggleTabs(4)"
+                  v-bind:class="{
+                    'bg-main': openTab !== 4,
+                    'bg-white': openTab === 4,
+                  }"
+                >
+                  Changa TV
+                </li>
               </ul>
             </div>
             <div class="tab-container">
               <div class="tab-content clearfix" id="tab-blog-1">
                 <div class="container">
                   <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-lg-8">
                       <div class="article-items-list-wrap">
-                        <div class="post-item-wrapper">
-                          <div class="post-image-categories">
-                            <img
-                              src="@/assets/images/blog-thumbnail.jpg"
-                              class="featured-image"
-                            />
-                            <div class="meta-category">Fundraiser Stories</div>
-                          </div>
-                          <div class="post-summaries">
-                            <a href="#"
-                              ><h3 class="post-title">Paukwa? Pakawa!</h3></a
-                            >
-                            <p class="post-excerpt">
-                              When you think back to many of the cultures,
-                              beliefs and practices you know of, does a story
-                              come to mind? I bet that a story does come to
-                              mind. This familiarity is a subtle resemblance of
-                              the togetherness stories
-                            </p>
-                          </div>
-                          <div class="post-footer">
-                            <div class="meta-date">Tuesday, June 8th, 2021</div>
-                            <div class="meta-social">
-                              <a href="#"
-                                ><img src="@/assets/images/ic-share-fb.png"
-                              /></a>
-                              <a href="#"
-                                ><img
-                                  src="@/assets/images/ic-share-twitter.png"
-                              /></a>
-                              <a href="#"
-                                ><img src="@/assets/images/ic-share-wa.png"
-                              /></a>
-                              <a href="#"
-                                ><img
-                                  src="@/assets/images/ic-share-telegram.png"
-                              /></a>
-                            </div>
-                          </div>
+                        <div
+                          v-bind:class="{
+                            hidden: openTab !== 1,
+                            block: openTab === 1,
+                          }"
+                        >
+                          <BlogCard />
                         </div>
-                        <div class="post-item-wrapper">
-                          <div class="post-image-categories">
-                            <img
-                              src="@/assets/images/blog-thumbnail.jpg"
-                              class="featured-image"
-                            />
-                            <div class="meta-category">Fundraiser Stories</div>
-                          </div>
-                          <div class="post-summaries">
-                            <a href="#"
-                              ><h3 class="post-title">Paukwa? Pakawa!</h3></a
-                            >
-                            <p class="post-excerpt">
-                              When you think back to many of the cultures,
-                              beliefs and practices you know of, does a story
-                              come to mind? I bet that a story does come to
-                              mind. This familiarity is a subtle resemblance of
-                              the togetherness stories
-                            </p>
-                          </div>
-                          <div class="post-footer">
-                            <div class="meta-date">Tuesday, June 8th, 2021</div>
-                            <div class="meta-social">
-                              <a href="#"
-                                ><img src="@/assets/images/ic-share-fb.png"
-                              /></a>
-                              <a href="#"
-                                ><img
-                                  src="@/assets/images/ic-share-twitter.png"
-                              /></a>
-                              <a href="#"
-                                ><img src="@/assets/images/ic-share-wa.png"
-                              /></a>
-                              <a href="#"
-                                ><img
-                                  src="@/assets/images/ic-share-telegram.png"
-                              /></a>
-                            </div>
-                          </div>
+                        <div
+                          v-bind:class="{
+                            hidden: openTab !== 2,
+                            block: openTab === 2,
+                          }"
+                        >
+                          <BlogCard />
                         </div>
-                        <div class="post-item-wrapper">
-                          <div class="post-image-categories">
-                            <img
-                              src="@/assets/images/blog-thumbnail.jpg"
-                              class="featured-image"
-                            />
-                            <div class="meta-category">Fundraiser Stories</div>
-                          </div>
-                          <div class="post-summaries">
-                            <a href="#"
-                              ><h3 class="post-title">Paukwa? Pakawa!</h3></a
-                            >
-                            <p class="post-excerpt">
-                              When you think back to many of the cultures,
-                              beliefs and practices you know of, does a story
-                              come to mind? I bet that a story does come to
-                              mind. This familiarity is a subtle resemblance of
-                              the togetherness stories
-                            </p>
-                          </div>
-                          <div class="post-footer">
-                            <div class="meta-date">Tuesday, June 8th, 2021</div>
-                            <div class="meta-social">
-                              <a href="#"
-                                ><img src="@/assets/images/ic-share-fb.png"
-                              /></a>
-                              <a href="#"
-                                ><img
-                                  src="@/assets/images/ic-share-twitter.png"
-                              /></a>
-                              <a href="#"
-                                ><img src="@/assets/images/ic-share-wa.png"
-                              /></a>
-                              <a href="#"
-                                ><img
-                                  src="@/assets/images/ic-share-telegram.png"
-                              /></a>
-                            </div>
-                          </div>
+                        <div
+                          v-bind:class="{
+                            hidden: openTab !== 3,
+                            block: openTab === 3,
+                          }"
+                        >
+                          <BlogCard />
                         </div>
-                        <div class="post-item-wrapper">
-                          <div class="post-image-categories">
-                            <img
-                              src="@/assets/images/blog-thumbnail.jpg"
-                              class="featured-image"
-                            />
-                            <div class="meta-category">Fundraiser Stories</div>
-                          </div>
-                          <div class="post-summaries">
-                            <a href="#"
-                              ><h3 class="post-title">Paukwa? Pakawa!</h3></a
-                            >
-                            <p class="post-excerpt">
-                              When you think back to many of the cultures,
-                              beliefs and practices you know of, does a story
-                              come to mind? I bet that a story does come to
-                              mind. This familiarity is a subtle resemblance of
-                              the togetherness stories
-                            </p>
-                          </div>
-                          <div class="post-footer">
-                            <div class="meta-date">Tuesday, June 8th, 2021</div>
-                            <div class="meta-social">
-                              <a href="#"
-                                ><img src="@/assets/images/ic-share-fb.png"
-                              /></a>
-                              <a href="#"
-                                ><img
-                                  src="@/assets/images/ic-share-twitter.png"
-                              /></a>
-                              <a href="#"
-                                ><img src="@/assets/images/ic-share-wa.png"
-                              /></a>
-                              <a href="#"
-                                ><img
-                                  src="@/assets/images/ic-share-telegram.png"
-                              /></a>
-                            </div>
-                          </div>
+                        <div
+                          v-bind:class="{
+                            hidden: openTab !== 4,
+                            block: openTab === 4,
+                          }"
+                        >
+                          <BlogCard />
                         </div>
-                        <ul class="pagination">
-                          <li class="page-item disabled">
-                            <a class="page-link" href="#">&laquo;</a>
-                          </li>
-                          <li class="page-item active">
-                            <a class="page-link" href="#"
-                              >1 <span class="sr-only">(current)</span></a
-                            >
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="#">2</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="#">3</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="#">4</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="#">5</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="#">&raquo;</a>
-                          </li>
-                        </ul>
+                        <Pagination />
                       </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-lg-4">
                       <div class="blog-post-sidebar">
-                        <div class="sidebar-item">
-                          <h3 class="sidebar-title">Recent Post</h3>
+                        <div
+                          class="sidebar-item"
+                          v-for="v in rightCard"
+                          :key="v"
+                        >
+                          <h3 class="sidebar-title">{{ v.title }}</h3>
                           <div class="recent-items-wrap">
-                            <a href="#">
+                            <router-link
+                              :to="n.to"
+                              v-for="n in v.rows"
+                              :key="n"
+                            >
                               <div class="recent-post-item">
-                                <img
-                                  src="@/assets/images/recent-1.jpg"
-                                  class="post-image"
-                                />
+                                <img :src="n.src" class="post-image" />
                                 <div class="post-text">
                                   <h4 class="post-title">
-                                    Feding the Poor Children
+                                    {{ n.title }}
                                   </h4>
-                                  <div class="post-meta">August 20, 2020</div>
+                                  <div class="post-meta">{{ n.date }}</div>
                                 </div>
                               </div>
-                            </a>
-                            <a href="#">
-                              <div class="recent-post-item">
-                                <img
-                                  src="@/assets/images/recent-2.jpg"
-                                  class="post-image"
-                                />
-                                <div class="post-text">
-                                  <h4 class="post-title">
-                                    South african pre primary school build for
-                                    children
-                                  </h4>
-                                  <div class="post-meta">August 20, 2020</div>
-                                </div>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div class="sidebar-item">
-                          <h3 class="sidebar-title">Featured Press</h3>
-                          <div class="recent-items-wrap">
-                            <a href="#">
-                              <div class="recent-post-item">
-                                <img
-                                  src="@/assets/images/recent-1.jpg"
-                                  class="post-image"
-                                />
-                                <div class="post-text">
-                                  <h4 class="post-title">
-                                    Feding the Poor Children
-                                  </h4>
-                                  <div class="post-meta">August 20, 2020</div>
-                                </div>
-                              </div>
-                            </a>
-                            <a href="#">
-                              <div class="recent-post-item">
-                                <img
-                                  src="@/assets/images/recent-2.jpg"
-                                  class="post-image"
-                                />
-                                <div class="post-text">
-                                  <h4 class="post-title">
-                                    South african pre primary school build for
-                                    children
-                                  </h4>
-                                  <div class="post-meta">August 20, 2020</div>
-                                </div>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div class="sidebar-item">
-                          <h3 class="sidebar-title">Changa TV</h3>
-                          <div class="recent-items-wrap">
-                            <a href="#">
-                              <div class="recent-post-item">
-                                <img
-                                  src="@/assets/images/recent-1.jpg"
-                                  class="post-image"
-                                />
-                                <div class="post-text">
-                                  <h4 class="post-title">
-                                    Feding the Poor Children
-                                  </h4>
-                                  <div class="post-meta">August 20, 2020</div>
-                                </div>
-                              </div>
-                            </a>
-                            <a href="#">
-                              <div class="recent-post-item">
-                                <img
-                                  src="@/assets/images/recent-2.jpg"
-                                  class="post-image"
-                                />
-                                <div class="post-text">
-                                  <h4 class="post-title">
-                                    South african pre primary school build for
-                                    children
-                                  </h4>
-                                  <div class="post-meta">August 20, 2020</div>
-                                </div>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div class="sidebar-item">
-                          <h3 class="sidebar-title">M-Changa Tips</h3>
-                          <div class="recent-items-wrap">
-                            <a href="#">
-                              <div class="recent-post-item">
-                                <img
-                                  src="@/assets/images/recent-1.jpg"
-                                  class="post-image"
-                                />
-                                <div class="post-text">
-                                  <h4 class="post-title">
-                                    Feding the Poor Children
-                                  </h4>
-                                  <div class="post-meta">August 20, 2020</div>
-                                </div>
-                              </div>
-                            </a>
-                            <a href="#">
-                              <div class="recent-post-item">
-                                <img
-                                  src="@/assets/images/recent-2.jpg"
-                                  class="post-image"
-                                />
-                                <div class="post-text">
-                                  <h4 class="post-title">
-                                    South african pre primary school build for
-                                    children
-                                  </h4>
-                                  <div class="post-meta">August 20, 2020</div>
-                                </div>
-                              </div>
-                            </a>
+                            </router-link>
                           </div>
                         </div>
                       </div>
@@ -356,42 +128,115 @@
             </div>
           </div>
         </div>
-        <div class="section nobg nomargin home-faq-sec">
-          <div class="container">
-            <div class="heading-block center">
-              <h2>Have a question? Check out our FAQs page or chat with us</h2>
-            </div>
-            <div class="row">
-              <div class="col-md-4">
-                <a href="#" class="button button-icon">
-                  <img src="@/assets/images/ic-faq-1.png" />
-                  <span>Start A Fundraiser</span>
-                </a>
-              </div>
-              <div class="col-md-4">
-                <a href="#" class="button button-icon">
-                  <img src="@/assets/images/ic-faq-2.png" />
-                  <span>Find Out More</span>
-                </a>
-              </div>
-              <div class="col-md-4">
-                <a href="#" class="button button-icon">
-                  <img src="@/assets/images/ic-faq-3.png" />
-                  <span>Request a call back</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
+      <QuestionBottom />
     </section>
+    <Footer />
   </div>
 </template>
 <script>
 import Breadcrumbs from "../components/Breadcrumbs.vue";
+import QuestionBottom from "../components/QuestionBottom.vue";
+import Footer from "../components/Footer/index.vue";
+import Pagination from "../components/Pagination.vue";
+import BlogCard from "../components/blogCard.vue";
 export default {
   components: {
     Breadcrumbs,
+    QuestionBottom,
+    Footer,
+    Pagination,
+    BlogCard,
+  },
+  data() {
+    return {
+      openTab: 1,
+      rightCard: [
+        {
+          title: "Recent Post",
+          rows: [
+            {
+              to: "",
+              src: require("@/assets/images/recent-1.jpg"),
+              title: "Feding the Poor Children",
+              date: "August 20, 2020",
+            },
+            {
+              to: "",
+              src: require("@/assets/images/recent-2.jpg"),
+              title: "South african pre primary school build for children",
+              date: "August 20, 2020",
+            },
+          ],
+        },
+        {
+          title: "Featured Press",
+          rows: [
+            {
+              to: "",
+              src: require("@/assets/images/recent-1.jpg"),
+              title: "Feding the Poor Children",
+              date: "August 20, 2020",
+            },
+            {
+              to: "",
+              src: require("@/assets/images/recent-2.jpg"),
+              title: "South african pre primary school build for children",
+              date: "August 20, 2020",
+            },
+          ],
+        },
+        {
+          title: "Changa TV",
+          rows: [
+            {
+              to: "",
+              src: require("@/assets/images/recent-1.jpg"),
+              title: "Feding the Poor Children",
+              date: "August 20, 2020",
+            },
+            {
+              to: "",
+              src: require("@/assets/images/recent-2.jpg"),
+              title: "South african pre primary school build for children",
+              date: "August 20, 2020",
+            },
+          ],
+        },
+        {
+          title: "M-Changa Tips",
+          rows: [
+            {
+              to: "",
+              src: require("@/assets/images/recent-1.jpg"),
+              title: "Feding the Poor Children",
+              date: "August 20, 2020",
+            },
+            {
+              to: "",
+              src: require("@/assets/images/recent-2.jpg"),
+              title: "South african pre primary school build for children",
+              date: "August 20, 2020",
+            },
+          ],
+        },
+      ],
+    };
+  },
+  methods: {
+    toggleTabs: function (tabNumber) {
+      this.openTab = tabNumber;
+    },
   },
 };
 </script>
+<style>
+.about-sub-nav .tab-nav > li {
+  height: 60px !important;
+  line-height: 60px !important;
+  font-family: "Nunito", sans-serif;
+  font-size: 15px !important;
+  color: #18181a !important;
+  font-weight: bold;
+}
+</style>

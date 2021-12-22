@@ -111,7 +111,7 @@
     </section>
 
     <section id="content">
-      <div class="content-wrap">
+      <div>
         <div class="section nobg nopadding notopmargin home-why-sec">
           <div class="container">
             <div class="heading-block center">
@@ -550,66 +550,23 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
-                <div class="article-item">
-                  <div class="socmed-icon flex items-center">
-                    <img
-                      class="mx-auto"
-                      src="@/assets/images/ic-blogger-blog.png"
-                    />
-                  </div>
-                  <img
-                    src="@/assets/images/article-3.jpg"
-                    class="featured-image"
-                  />
-                  <div class="article-title">
-                    <img
-                      src="@/assets/images/favicon.png"
-                      class="authors-image"
-                    />
-                    <div class="author-text">
-                      <h3>M-Changa</h3>
-                      <p>29 subscribers</p>
-                    </div>
-                  </div>
-                  <div class="article-excerpt">
-                    <p class="uppercase">
-                      M-CHANGA: FUNDRAISING SIMPLE: FAST: SECURE.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section nobg nomargin home-faq-sec">
-          <div class="container">
-            <div class="heading-block center">
-              <h2>Have a question? Check out our FAQs page or chat with us</h2>
-            </div>
-            <div class="row">
-              <div class="col-md-4">
-                <a href="#" class="button button-icon">
-                  <img src="@/assets/images/ic-faq-1.png" />
-                  <span>Start A Fundraiser</span>
-                </a>
-              </div>
-              <div class="col-md-4">
-                <a href="#" class="button button-icon">
-                  <img src="@/assets/images/ic-faq-2.png" />
-                  <span>Find Out More</span>
-                </a>
-              </div>
-              <div class="col-md-4">
-                <a href="#" class="button button-icon">
-                  <img src="@/assets/images/ic-faq-3.png" />
-                  <span>Request a call back</span>
-                </a>
-              </div>
             </div>
           </div>
         </div>
       </div>
+      <QquestionBotton/>
     </section>
+    <Footer/>
   </div>
 </template>
+<script>
+import QquestionBotton from '../components/QuestionBottom.vue';
+import Footer from '../components/Footer/index.vue';
+
+export default {
+  components: {
+    QquestionBotton,
+    Footer,
+  },
+};
+</script>

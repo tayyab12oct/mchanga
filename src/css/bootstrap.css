@@ -9770,11 +9770,11 @@ button.bg-dark:focus {
 
 a.text-primary:hover,
 a.text-primary:focus {
-  color: #0062cc !important;
+  color: #fcc82c !important;
 }
 
 .text-secondary {
-  color: #6c757d !important;
+  color: #465a05 !important;
 }
 
 a.text-secondary:hover,

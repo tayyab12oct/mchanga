@@ -30,7 +30,7 @@
           </div>
           <div class="col-md-2">
             <div id="footer-widget-2" class="footer-widget">
-              <h3 class="widget-title">Menu</h3>
+              <h3 class="widget-title text-white">Menu</h3>
               <ul class="footer-menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Get started</a></li>
@@ -42,7 +42,7 @@
           </div>
           <div class="col-md-3">
             <div id="footer-widget-3" class="footer-widget">
-              <h3 class="widget-title">Recent Post</h3>
+              <h3 class="widget-title text-white">Recent Post</h3>
               <div class="recent-items-wrap">
                 <a href="#">
                   <div class="recent-post-item">
@@ -75,7 +75,7 @@
           </div>
           <div class="col-md-3">
             <div id="footer-widget-4" class="footer-widget">
-              <h3 class="widget-title">Contact</h3>
+              <h3 class="widget-title text-white">Contact</h3>
               <p>
                 Westcom Building, Mahiga Mairu Avenue, off Waiyaki Way, 3rd
                 Floor, Block B

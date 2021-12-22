@@ -72,3 +72,10 @@
     </div>
   </header>
 </template>
+<style>
+#header {
+  position: sticky !important;
+  top: 0;
+  z-index: 100;
+}
+</style>
