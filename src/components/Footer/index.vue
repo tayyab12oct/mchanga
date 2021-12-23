@@ -20,11 +20,11 @@
                 Disasters.
               </p>
               <div class="footer-social">
-                <a href="#"><img src="@/assets/images/facebook.png" /></a>
-                <a href="#"><img src="@/assets/images/twitter.png" /></a>
-                <a href="#"><img src="@/assets/images/linkedin.png" /></a>
-                <a href="#"><img src="@/assets/images/youtube.png" /></a>
-                <a href="#"><img src="@/assets/images/instagram.png" /></a>
+                <a href="#"><img src="@/assets/images/facebook.png"/></a>
+                <a href="#"><img src="@/assets/images/twitter.png"/></a>
+                <a href="#"><img src="@/assets/images/linkedin.png"/></a>
+                <a href="#"><img src="@/assets/images/youtube.png"/></a>
+                <a href="#"><img src="@/assets/images/instagram.png"/></a>
               </div>
             </div>
           </div>
@@ -32,11 +32,13 @@
             <div id="footer-widget-2" class="footer-widget">
               <h3 class="widget-title text-white">Menu</h3>
               <ul class="footer-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Get started</a></li>
-                <li><a href="#">Stories</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Questions</a></li>
+                <li><router-link to="/">Home</router-link></li>
+                <li>
+                  <router-link to="/personal-detail">Get started</router-link>
+                </li>
+                <li><router-link to="/blog">Stories</router-link></li>
+                <li><router-link to="/">About us</router-link></li>
+                <li><router-link to="/faq">Questions</router-link></li>
               </ul>
             </div>
           </div>
@@ -111,7 +113,11 @@
         </div>
       </div>
     </footer>
-    <div id="bottom_fundraiser_form" class="bottom-fundraiser-form">
+    <div
+      id="bottom_fundraiser_form"
+      class="bottom-fundraiser-form"
+      :class="bottomClass"
+    >
       <div class="container">
         <div class="heading-title">
           <h2>START YOUR FUNDRAISER RIGHT AWAY</h2>
@@ -151,3 +157,10 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  props: {
+    bottomClass: String,
+  },
+};
+</script>

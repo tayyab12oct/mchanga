@@ -1449,7 +1449,6 @@ body.stretched #header.full-header .container {
 
 #primary-menu ul>li {
 	float: left;
-	margin-left: 2px;
 }
 
 #primary-menu>ul>li:first-child {
@@ -1458,7 +1457,6 @@ body.stretched #header.full-header .container {
 
 #primary-menu ul li>a {
 	display: block;
-	line-height: 22px;
 	padding: 39px 15px;
 	color: #18181a;
 	font-weight: bold;
@@ -1490,10 +1488,11 @@ body.stretched #header.full-header .container {
 	margin: 0 0 0 5px;
 }
 
+/* 
 #primary-menu ul li:hover>a,
 #primary-menu ul li.current>a {
 	color: #fcc82c;
-}
+} */
 
 #primary-menu>ul>li.sub-menu>a>div {}
 

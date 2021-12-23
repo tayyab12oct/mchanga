@@ -73,7 +73,8 @@
                   </div>
                   <div class="form-submit center">
                     <div class="flex justify-center">
-                      <a href="#" class="button mx-auto w-44">next</a>
+                      <router-link to="/activate-your-fundraiser"
+                      class="button mx-auto w-44">next</router-link>
                     </div>
 
                     <p>

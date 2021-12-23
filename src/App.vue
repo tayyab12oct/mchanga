@@ -21,8 +21,9 @@ export default {
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&family=Permanent+Marker&display=swap");
-#nav a.router-link-exact-active {
-  color: #42b983;
+#primary-menu a.router-link-exact-active {
+  background-color: #fcc82c;
+  color: black;
 }
 body {
   background: #f9f7f6 !important;

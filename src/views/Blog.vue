@@ -135,11 +135,12 @@
   </div>
 </template>
 <script>
-import Breadcrumbs from "../components/Breadcrumbs.vue";
-import QuestionBottom from "../components/QuestionBottom.vue";
-import Footer from "../components/Footer/index.vue";
-import Pagination from "../components/Pagination.vue";
-import BlogCard from "../components/blogCard.vue";
+import Breadcrumbs from '../components/Breadcrumbs.vue';
+import QuestionBottom from '../components/QuestionBottom.vue';
+import Footer from '../components/Footer/index.vue';
+import Pagination from '../components/Pagination.vue';
+import BlogCard from '../components/blogCard.vue';
+
 export default {
   components: {
     Breadcrumbs,
@@ -153,70 +154,70 @@ export default {
       openTab: 1,
       rightCard: [
         {
-          title: "Recent Post",
+          title: 'Recent Post',
           rows: [
             {
-              to: "",
-              src: require("@/assets/images/recent-1.jpg"),
-              title: "Feding the Poor Children",
-              date: "August 20, 2020",
+              to: '',
+              src: require('@/assets/images/recent-1.jpg'),
+              title: 'Feding the Poor Children',
+              date: 'August 20, 2020',
             },
             {
-              to: "",
-              src: require("@/assets/images/recent-2.jpg"),
-              title: "South african pre primary school build for children",
-              date: "August 20, 2020",
+              to: '',
+              src: require('@/assets/images/recent-2.jpg'),
+              title: 'South african pre primary school build for children',
+              date: 'August 20, 2020',
             },
           ],
         },
         {
-          title: "Featured Press",
+          title: 'Featured Press',
           rows: [
             {
-              to: "",
-              src: require("@/assets/images/recent-1.jpg"),
-              title: "Feding the Poor Children",
-              date: "August 20, 2020",
+              to: '',
+              src: require('@/assets/images/recent-1.jpg'),
+              title: 'Feding the Poor Children',
+              date: 'August 20, 2020',
             },
             {
-              to: "",
-              src: require("@/assets/images/recent-2.jpg"),
-              title: "South african pre primary school build for children",
-              date: "August 20, 2020",
+              to: '',
+              src: require('@/assets/images/recent-2.jpg'),
+              title: 'South african pre primary school build for children',
+              date: 'August 20, 2020',
             },
           ],
         },
         {
-          title: "Changa TV",
+          title: 'Changa TV',
           rows: [
             {
-              to: "",
-              src: require("@/assets/images/recent-1.jpg"),
-              title: "Feding the Poor Children",
-              date: "August 20, 2020",
+              to: '',
+              src: require('@/assets/images/recent-1.jpg'),
+              title: 'Feding the Poor Children',
+              date: 'August 20, 2020',
             },
             {
-              to: "",
-              src: require("@/assets/images/recent-2.jpg"),
-              title: "South african pre primary school build for children",
-              date: "August 20, 2020",
+              to: '',
+              src: require('@/assets/images/recent-2.jpg'),
+              title: 'South african pre primary school build for children',
+              date: 'August 20, 2020',
             },
           ],
         },
         {
-          title: "M-Changa Tips",
+          title: 'M-Changa Tips',
           rows: [
             {
-              to: "",
-              src: require("@/assets/images/recent-1.jpg"),
-              title: "Feding the Poor Children",
-              date: "August 20, 2020",
+              to: '',
+              src: require('@/assets/images/recent-1.jpg'),
+              title: 'Feding the Poor Children',
+              date: 'August 20, 2020',
             },
             {
-              to: "",
-              src: require("@/assets/images/recent-2.jpg"),
-              title: "South african pre primary school build for children",
-              date: "August 20, 2020",
+              to: '',
+              src: require('@/assets/images/recent-2.jpg'),
+              title: 'South african pre primary school build for children',
+              date: 'August 20, 2020',
             },
           ],
         },
@@ -224,7 +225,7 @@ export default {
     };
   },
   methods: {
-    toggleTabs: function (tabNumber) {
+    toggleTabs(tabNumber) {
       this.openTab = tabNumber;
     },
   },

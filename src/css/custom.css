@@ -59,14 +59,11 @@
 }
 
 #primary-menu ul li>a {
-    line-height: 65px;
-    padding: 0 18px;
     font-family: 'Nunito', sans-serif;
     font-weight: 600;
     font-size: 15px;
     text-transform: none;
     letter-spacing: normal;
-    height: 59px;
     transition: all .4s;
 }
 
@@ -179,7 +176,7 @@
 }
 
 #slider.slider-element {
-    min-height: 256px;
+    min-height: 330px;
 }
 
 .slider-element.inner-page-slider {
@@ -199,7 +196,6 @@
 
 .home-slider .curve-overlay {
     position: absolute;
-    z-index: 1;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -1022,12 +1018,11 @@
     height: auto;
 }
 
-.tabs.tabs-team ul.tab-nav>li>a {
+.tabs.tabs-team ul.tab-nav>li {
     height: 50px !important;
     line-height: 50px !important;
     display: inline-block;
     width: auto;
-    background-color: #f9f7f6 !important;
     font-family: 'museo_sans_rounded900';
     font-size: 18px !important;
     color: rgb(102 102 102 / 50%);
@@ -1035,8 +1030,7 @@
     padding: 0 45px;
 }
 
-.tabs.tabs-team ul.tab-nav>li.ui-tabs-active>a {
-    background-color: #fcc82c !important;
+.tabs.tabs-team ul.tab-nav>li.ui-tabs-active {
     color: #465a05;
 }
 
@@ -1701,7 +1695,7 @@ select.form-control::-ms-expand {
 }
 
 .share-header-widget {
-    margin-top: -120px;
+    margin-top: -160px;
 }
 
 .top-share-fundraiser-section {
@@ -1775,10 +1769,9 @@ select.form-control::-ms-expand {
     margin: 0 5px;
 }
 
-.tabs.tabs-share-wrapper ul.tab-nav>li a {
+.tabs.tabs-share-wrapper ul.tab-nav>li {
     padding: 0;
     width: 180px;
-    background-color: transparent !important;
 }
 
 .tabs.tabs-share-wrapper ul.tab-nav>li.ui-tabs-active>a {
@@ -2051,14 +2044,22 @@ a.gallery-item>img {
         padding: 12px 0px !important;
     }
 
+    #primary-menu ul li .more_menu {
+        font-size: 24px;
+        line-height: normal;
+        height: auto;
+        color: #18181a;
+        padding: 12px 0px !important;
+    }
+
     #primary-menu ul li {
         border: none;
     }
 
-    #primary-menu>ul,
+    /* #primary-menu>ul,
     #primary-menu>div>ul {
         padding: 20px 0 !important;
-    }
+    } */
 
     #primary-menu .other-menu-items {
         margin-left: 0 !important;
@@ -2311,7 +2312,7 @@ a.gallery-item>img {
         font-size: 20px;
     }
 
-    .tabs.tabs-team ul.tab-nav>li>a {
+    .tabs.tabs-team ul.tab-nav>li {
         font-size: 14px !important;
         height: auto !important;
         line-height: normal !important;
@@ -2540,7 +2541,7 @@ a.gallery-item>img {
     }
 
     .share-header-widget {
-        margin-top: -50px;
+        margin-top: -65px;
     }
 
     .slider-share-fundraiser .slider-inner {
@@ -2588,8 +2589,8 @@ a.gallery-item>img {
         font-size: 12px;
     }
 
-    .tabs.tabs-share-wrapper ul.tab-nav>li a,
-    .tabs.tabs-share-wrapper ul.tab-nav>li.ui-tabs-active>a {
+    .tabs.tabs-share-wrapper ul.tab-nav>li,
+    .tabs.tabs-share-wrapper ul.tab-nav>li.ui-tabs-active {
         width: auto;
         padding: 12px 20px;
     }
@@ -3095,15 +3096,11 @@ a.gallery-item>img {
 }
 
 .show-more-button {
-    position: absolute;
-    left: 0;
     z-index: 10;
-    text-align: center;
     display: block;
     opacity: 1;
     visibility: visible;
     transition: all 0.3s;
-    bottom: -6px;
     color: #475b06;
     font-family: 'museo_sans_rounded900';
     text-transform: uppercase;

@@ -212,12 +212,14 @@
       </div>
       <QuestionBottom />
     </section>
+    <Footer />
   </div>
 </template>
 <script>
 import Breadcrumbs from "../components/Breadcrumbs.vue";
 import Card from "../components/Card.vue";
 import QuestionBottom from "../components/QuestionBottom.vue";
+import Footer from "../components/Footer/index.vue";
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
 import { ChevronDownIcon } from "@heroicons/vue/outline";
 
@@ -226,6 +228,7 @@ export default {
     Breadcrumbs,
     Card,
     QuestionBottom,
+    Footer,
     Disclosure,
     DisclosureButton,
     DisclosurePanel,

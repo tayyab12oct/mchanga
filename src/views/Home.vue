@@ -2,12 +2,14 @@
   <div>
     <section
       id="slider"
-      class="slider-element home-slider"
-      style="
-        background: url('images/pexels-nappy-935985.jpg');
-        background-size: cover;
-      "
+      class="slider-element home-slider mb-10"
+      style="background-image: url('img/pexels-nappy-935985.d001a95e.jpg'); background-size: cover;"
     >
+      <!-- <img
+        src="@/assets/images/pexels-nappy-935985.jpg"
+        class="home-slider absolute top-0 left-0 bottom-0 w-full bg-cover"
+        alt=""
+      /> -->
       <div class="texture-overlay">
         <div class="texture-left">
           <img src="@/assets/images/zigzag-texture.png" />
@@ -19,7 +21,7 @@
       <div class="curve-overlay">
         <img src="@/assets/images/banner-curve-overlay.png" />
       </div>
-      <div class="slider-inner vertical-middle center">
+      <div class="slider-inner vertical-middle center pt-20">
         <div class="container">
           <div class="banner-heading">
             <h1><span>Fundraising:</span>Simple. Fast. Secure.</h1>
@@ -42,7 +44,7 @@
               </div>
             </form>
           </div>
-          <div class="home-banner-statistic">
+          <div class="home-banner-statistic z-50">
             <div class="row">
               <div class="col-md-4">
                 <div class="banner-statistic-item">
@@ -52,13 +54,7 @@
                   />
                   <div class="statistic-text">
                     <div class="counter">
-                      <span
-                        data-from="10"
-                        data-to="47851"
-                        data-refresh-interval="50"
-                        data-speed="2000"
-                        data-comma="true"
-                      ></span>
+                      47,851
                     </div>
                     <p>Fundraisers Started</p>
                   </div>
@@ -72,13 +68,7 @@
                   />
                   <div class="statistic-text">
                     <div class="counter">
-                      <span
-                        data-from="10"
-                        data-to="92568"
-                        data-refresh-interval="50"
-                        data-speed="2000"
-                        data-comma="true"
-                      ></span>
+                      92,568
                     </div>
                     <p>Supporters</p>
                   </div>
@@ -92,13 +82,7 @@
                   />
                   <div class="statistic-text">
                     <div class="counter">
-                      <span
-                        data-from="0"
-                        data-to="89"
-                        data-refresh-interval="50"
-                        data-speed="2000"
-                      ></span
-                      >%
+                      89%
                     </div>
                     <p>Satified Customers</p>
                   </div>
@@ -111,59 +95,17 @@
     </section>
 
     <section id="content">
-      <div>
+      <div class="pb-10">
         <div class="section nobg nopadding notopmargin home-why-sec">
           <div class="container">
             <div class="heading-block center">
               <h2>Why M-Changa</h2>
             </div>
             <div class="row">
-              <div class="col-md-3 col-6">
+              <div class="col-md-3 col-6" v-for="v in services" :key="v">
                 <div class="home-why-item">
-                  <img class="mx-auto" src="@/assets/images/ic-why-1.png" />
-                  <h4>Convenient set up and management process</h4>
-                </div>
-              </div>
-              <div class="col-md-3 col-6">
-                <div class="home-why-item">
-                  <img class="mx-auto" src="@/assets/images/ic-why-2.png" />
-                  <h4>Receive donations via mobile & electronic money</h4>
-                </div>
-              </div>
-              <div class="col-md-3 col-6">
-                <div class="home-why-item">
-                  <img class="mx-auto" src="@/assets/images/ic-why-3.png" />
-                  <h4>Easy sharing with a single click</h4>
-                </div>
-              </div>
-              <div class="col-md-3 col-6">
-                <div class="home-why-item">
-                  <img class="mx-auto" src="@/assets/images/ic-why-4.png" />
-                  <h4>Access to daily auto- reports</h4>
-                </div>
-              </div>
-              <div class="col-md-3 col-6">
-                <div class="home-why-item">
-                  <img class="mx-auto" src="@/assets/images/ic-why-5.png" />
-                  <h4>Security of donations</h4>
-                </div>
-              </div>
-              <div class="col-md-3 col-6">
-                <div class="home-why-item">
-                  <img class="mx-auto" src="@/assets/images/ic-why-6.png" />
-                  <h4>Upon verification, withdraw donations without hassle</h4>
-                </div>
-              </div>
-              <div class="col-md-3 col-6">
-                <div class="home-why-item">
-                  <img class="mx-auto" src="@/assets/images/ic-why-7.png" />
-                  <h4>Get expert customer support</h4>
-                </div>
-              </div>
-              <div class="col-md-3 col-6">
-                <div class="home-why-item">
-                  <img class="mx-auto" src="@/assets/images/ic-why-8.png" />
-                  <h4>International donation options</h4>
+                  <img class="mx-auto" :src="v.src" />
+                  <h4>{{ v.text }}</h4>
                 </div>
               </div>
             </div>
@@ -233,29 +175,15 @@
                       <img src="@/assets/images/device-contour.png" />
                     </div>
                     <div class="screen-carousel">
-                      <div
-                        class="owl-carousel carousel-widget"
-                        data-margin="0"
-                        data-items="1"
-                        data-speed="450"
-                        data-autoplay="4000"
-                        data-loop="true"
-                        data-pagi="false"
-                        data-nav="false"
+                      <carousel
+                        autoplay="2000"
+                        :wrapAround="true"
+                        :items-to-show="1"
                       >
-                        <img
-                          src="@/assets/images/screen-1.jpg"
-                          alt="Slider 1"
-                        />
-                        <img
-                          src="@/assets/images/screen-2.jpg"
-                          alt="Slider 2"
-                        />
-                        <img
-                          src="@/assets/images/screen-3.jpg"
-                          alt="Slider 3"
-                        />
-                      </div>
+                        <slide v-for="v in stepsSlide" :key="v">
+                          <img :src="v.src" alt="Slider" />
+                        </slide>
+                      </carousel>
                     </div>
                   </div>
                 </div>
@@ -268,200 +196,54 @@
             <div class="heading-block center">
               <h2>Trending Fundraisers</h2>
             </div>
-            <div
-              class="owl-carousel image-carousel carousel-widget"
-              data-margin="30"
-              data-nav="true"
-              data-loop="true"
-              data-autoplay="6000"
-              data-pagi="false"
-              data-items-xs="1"
-              data-items-sm="1"
-              data-items-md="2"
-              data-items-lg="3"
-              data-items-xl="3"
+            <carousel
+              :settings="settings"
+              :wrap-around="true"
+              :breakpoints="breakpoints"
+              :items-to-show="1"
+              :wrapAround="true"
+              :autoplay="autoplay"
+              class="carousel"
             >
-              <div class="trending-item-wrapper">
-                <div class="trending-image">
-                  <img src="@/assets/images/fundraiser-1.jpg" />
-                </div>
-                <div class="trending-card">
-                  <div class="trending-card-inner">
-                    <h3>Mama Eva Medical Fundraiser! Let’s do it for her</h3>
-                    <p>RAISED: KES 109,300<br />Donations 143</p>
-                    <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        aria-valuenow="60"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                        style="width: 60%"
-                      >
-                        <span>60%</span>
+              <slide v-for="v in 10" :key="v">
+                <div class="trending-item-wrapper w-full md:px-3">
+                  <div class="trending-image">
+                    <img src="@/assets/images/fundraiser-1.jpg" />
+                  </div>
+                  <div class="trending-card">
+                    <div class="trending-card-inner">
+                      <h3>
+                        Mama Eva Medical Fundraiser! Let’s do it for her
+                      </h3>
+                      <p>RAISED: KES 109,300<br />Donations 143</p>
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          aria-valuenow="60"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          style="width: 60%"
+                        >
+                          <span>60%</span>
+                        </div>
                       </div>
-                    </div>
-                    <div class="goal-statistic">
-                      <strong>$ 1,378</strong> funds raised of
-                      <strong>$ 10.000</strong> goal
-                    </div>
-                    <div class="trending-footer">
-                      <a href="#" class="button button-outline">Donate</a>
+                      <div class="goal-statistic">
+                        <strong>$ 1,378</strong> funds raised of
+                        <strong>$ 10.000</strong> goal
+                      </div>
+                      <div class="trending-footer">
+                        <a href="#" class="button button-outline">Donate</a>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="trending-item-wrapper">
-                <div class="trending-image">
-                  <img src="@/assets/images/fundraiser-1.jpg" />
-                </div>
-                <div class="trending-card">
-                  <div class="trending-card-inner">
-                    <h3>Mama Eva Medical Fundraiser! Let’s do it for her</h3>
-                    <p>RAISED: KES 109,300<br />Donations 143</p>
-                    <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        aria-valuenow="60"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                        style="width: 60%"
-                      >
-                        <span>60%</span>
-                      </div>
-                    </div>
-                    <div class="goal-statistic">
-                      <strong>$ 1,378</strong> funds raised of
-                      <strong>$ 10.000</strong> goal
-                    </div>
-                    <div class="trending-footer">
-                      <a href="#" class="button button-outline">Donate</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="trending-item-wrapper">
-                <div class="trending-image">
-                  <img src="@/assets/images/fundraiser-1.jpg" />
-                </div>
-                <div class="trending-card">
-                  <div class="trending-card-inner">
-                    <h3>Mama Eva Medical Fundraiser! Let’s do it for her</h3>
-                    <p>RAISED: KES 109,300<br />Donations 143</p>
-                    <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        aria-valuenow="60"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                        style="width: 60%"
-                      >
-                        <span>60%</span>
-                      </div>
-                    </div>
-                    <div class="goal-statistic">
-                      <strong>$ 1,378</strong> funds raised of
-                      <strong>$ 10.000</strong> goal
-                    </div>
-                    <div class="trending-footer">
-                      <a href="#" class="button button-outline">Donate</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="trending-item-wrapper">
-                <div class="trending-image">
-                  <img src="@/assets/images/fundraiser-1.jpg" />
-                </div>
-                <div class="trending-card">
-                  <div class="trending-card-inner">
-                    <h3>Mama Eva Medical Fundraiser! Let’s do it for her</h3>
-                    <p>RAISED: KES 109,300<br />Donations 143</p>
-                    <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        aria-valuenow="60"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                        style="width: 60%"
-                      >
-                        <span>60%</span>
-                      </div>
-                    </div>
-                    <div class="goal-statistic">
-                      <strong>$ 1,378</strong> funds raised of
-                      <strong>$ 10.000</strong> goal
-                    </div>
-                    <div class="trending-footer">
-                      <a href="#" class="button button-outline">Donate</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="trending-item-wrapper">
-                <div class="trending-image">
-                  <img src="@/assets/images/fundraiser-1.jpg" />
-                </div>
-                <div class="trending-card">
-                  <div class="trending-card-inner">
-                    <h3>Mama Eva Medical Fundraiser! Let’s do it for her</h3>
-                    <p>RAISED: KES 109,300<br />Donations 143</p>
-                    <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        aria-valuenow="60"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                        style="width: 60%"
-                      >
-                        <span>60%</span>
-                      </div>
-                    </div>
-                    <div class="goal-statistic">
-                      <strong>$ 1,378</strong> funds raised of
-                      <strong>$ 10.000</strong> goal
-                    </div>
-                    <div class="trending-footer">
-                      <a href="#" class="button button-outline">Donate</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="trending-item-wrapper">
-                <div class="trending-image">
-                  <img src="@/assets/images/fundraiser-1.jpg" />
-                </div>
-                <div class="trending-card">
-                  <div class="trending-card-inner">
-                    <h3>Mama Eva Medical Fundraiser! Let’s do it for her</h3>
-                    <p>RAISED: KES 109,300<br />Donations 143</p>
-                    <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        aria-valuenow="60"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                        style="width: 60%"
-                      >
-                        <span>60%</span>
-                      </div>
-                    </div>
-                    <div class="goal-statistic">
-                      <strong>$ 1,378</strong> funds raised of
-                      <strong>$ 10.000</strong> goal
-                    </div>
-                    <div class="trending-footer">
-                      <a href="#" class="button button-outline">Donate</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+              </slide>
+
+              <template #addons>
+                <navigation />
+              </template>
+            </carousel>
             <div class="row justify-content-center">
               <div class="col-md-10">
                 <form class="searchbox-fundraiser">
@@ -482,91 +264,147 @@
               <h2>What is Hapening?</h2>
             </div>
             <div class="row article-items-wrapper">
-              <div class="col-md-4">
-                <div class="article-item">
-                  <div class="socmed-icon flex items-center">
-                    <img
-                      class="mx-auto"
-                      src="@/assets/images/ic-twitter-blog.png"
-                    />
-                  </div>
-                  <img
-                    src="@/assets/images/article-1.jpg"
-                    class="featured-image"
-                  />
-                  <div class="article-title">
-                    <img
-                      src="@/assets/images/favicon.png"
-                      class="authors-image"
-                    />
-                    <div class="author-text">
-                      <h3>M-Changa Fundraising</h3>
-                      <p>@m_changa</p>
-                    </div>
-                  </div>
-                  <div class="article-excerpt">
-                    <p>
-                      Dear customer, in line with our commitment to offer you
-                      the best service while keeping safe, we would like to
-                      inform you that moving forward ALL walk-in service will be
-                      on Appointment Only.
-                    </p>
-                    <p>
-                      To book an appointment, kindly reach us on 020 765 0919.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="article-item">
-                  <div class="socmed-icon flex items-center">
-                    <img
-                      class="mx-auto"
-                      src="@/assets/images/ic-facebook-blog.png"
-                    />
-                  </div>
-                  <img
-                    src="@/assets/images/article-2.jpg"
-                    class="featured-image"
-                  />
-                  <div class="article-title">
-                    <img
-                      src="@/assets/images/favicon.png"
-                      class="authors-image"
-                    />
-                    <div class="author-text">
-                      <h3>m_changa_kenya</h3>
-                      <p></p>
-                    </div>
-                  </div>
-                  <div class="article-excerpt">
-                    <p>Virtual management. Diverse donation options.</p>
-                    <p>
-                      What other convenience is offered by online fundraising?
-                      Join us on 29th July as we unpack why online fundraising
-                      is the most convenient resource mobilization option for
-                      you by registering at https://bit.ly/Ceffective.
-                    </p>
-                  </div>
-                </div>
+              <div class="col-md-4" v-for="v in cards" :key="v">
+                <HapeningCard
+                  :icon="v.icon"
+                  :image="v.image"
+                  :title="v.title"
+                  :subText="v.subText"
+                  :text1="v.text1"
+                  :text2="v.text2"
+                />
               </div>
             </div>
           </div>
         </div>
+        <QquestionBottom />
       </div>
-      <QquestionBotton/>
     </section>
-    <Footer/>
+    <Footer />
   </div>
 </template>
 <script>
-import QquestionBotton from '../components/QuestionBottom.vue';
-import Footer from '../components/Footer/index.vue';
+import QquestionBottom from "../components/QuestionBottom.vue";
+import HapeningCard from "../components/HapeningCard.vue";
+import Footer from "../components/Footer/index.vue";
+import "vue3-carousel/dist/carousel.css";
+import { Carousel, Slide, Navigation } from "vue3-carousel";
 
 export default {
   components: {
-    QquestionBotton,
+    QquestionBottom,
     Footer,
+    HapeningCard,
+    Carousel,
+    Slide,
+    Navigation,
+  },
+  data() {
+    return {
+      services: [
+        {
+          src: require("@/assets/images/ic-why-1.png"),
+          text: "Convenient set up and management process",
+        },
+        {
+          src: require("@/assets/images/ic-why-2.png"),
+          text: "Receive donations via mobile & electronic money",
+        },
+        {
+          src: require("@/assets/images/ic-why-3.png"),
+          text: "Easy sharing with a single click",
+        },
+        {
+          src: require("@/assets/images/ic-why-4.png"),
+          text: "Access to daily auto- reports",
+        },
+        {
+          src: require("@/assets/images/ic-why-5.png"),
+          text: "Security of donations",
+        },
+        {
+          src: require("@/assets/images/ic-why-6.png"),
+          text: "Upon verification, withdraw donations without hassle",
+        },
+        {
+          src: require("@/assets/images/ic-why-7.png"),
+          text: "Get expert customer support",
+        },
+        {
+          src: require("@/assets/images/ic-why-8.png"),
+          text: "International donation options",
+        },
+      ],
+      cards: [
+        {
+          icon: require("@/assets/images/ic-twitter-blog.png"),
+          image: require("@/assets/images/article-1.jpg"),
+          title: "M-Changa Fundraising",
+          subText: "@m_changa",
+          text1:
+            "Dear customer, in line with our commitment to offer you the best service while keeping safe, we would like to inform you that moving forward ALL walk-in service will be on Appointment Only.",
+          text2: "To book an appointment, kindly reach us on 020 765 0919.",
+        },
+        {
+          icon: require("@/assets/images/ic-facebook-blog.png"),
+          image: require("@/assets/images/article-2.jpg"),
+          title: "m_changa_kenya",
+          subText: "",
+          text1: "Virtual management. Diverse donation options.",
+          text2:
+            "What other convenience is offered by online fundraising? Join us on 29th July as we unpack why online fundraising is the most convenient resource mobilization option for you by registering at https://bit.ly/Ceffective.",
+        },
+        {
+          icon: require("@/assets/images/ic-blogger-blog.png"),
+          image: require("@/assets/images/article-3.jpg"),
+          title: "M-Changa",
+          subText: "29 subscribers",
+          text1: "M-CHANGA: FUNDRAISING SIMPLE: FAST: SECURE.",
+          text2: "",
+        },
+      ],
+      stepsSlide: [
+        {
+          src: require("@/assets/images/screen-1.jpg"),
+        },
+        {
+          src: require("@/assets/images/screen-2.jpg"),
+        },
+        {
+          src: require("@/assets/images/screen-3.jpg"),
+        },
+      ],
+      settings: {
+        itemsToShow: 1,
+        snapAlign: "center",
+        autoplay: 2000,
+      },
+      breakpoints: {
+        700: {
+          itemsToShow: 2,
+          snapAlign: "center",
+          autoplay: 3000,
+        },
+        1024: {
+          itemsToShow: 3,
+          snapAlign: "start",
+          autoplay: 3000,
+        },
+      },
+    };
   },
 };
 </script>
+<style>
+.carousel__prev,
+.carousel__next {
+  background-color: white;
+  color: #666;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.carousel__prev:hover,
+.carousel__next:hover {
+  background-color: #fcc82c;
+}
+</style>

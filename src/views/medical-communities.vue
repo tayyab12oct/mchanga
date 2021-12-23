@@ -74,6 +74,7 @@
       </div>
       <QuestionBottom />
     </section>
+    <Footer />
   </div>
 </template>
 <script>
@@ -82,6 +83,7 @@ import QuestionBottom from "../components/QuestionBottom.vue";
 import Pagination from "../components/Pagination.vue";
 import ProductCard from "../components/ProductCard.vue";
 import AboutCard from "../components/AboutCard.vue";
+import Footer from "../components/Footer/index.vue";
 export default {
   components: {
     Breadcrumbs,
@@ -89,6 +91,7 @@ export default {
     Pagination,
     ProductCard,
     AboutCard,
+    Footer,
   },
   data() {
     return {

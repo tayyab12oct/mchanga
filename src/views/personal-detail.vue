@@ -45,7 +45,7 @@
                 </div>
               </div>
               <div class="form-submit center flex justify-center">
-                <a href="#" class="button">next</a>
+                <router-link to="/register" class="button">next</router-link>
               </div>
             </form>
           </div>

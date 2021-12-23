@@ -9,7 +9,7 @@
       <div class="section nobg nomargin">
         <div class="container">
           <div class="row mchanga-communities-wrapper">
-            <div class="col-md-4" v-for="n in 9" :key="n">
+            <div class="col-lg-4 col-md-6" v-for="n in 9" :key="n">
               <YetuCard />
             </div>
             <div class="col-md-12 mchanga-communities-footer">
@@ -23,6 +23,7 @@
       </div>
       <QuestionBottom />
     </section>
+    <Footer />
   </div>
 </template>
 
@@ -31,12 +32,14 @@ import Breadcrumbs from "../components/Breadcrumbs.vue";
 import QuestionBottom from "../components/QuestionBottom.vue";
 import YetuCard from "../components/YetuCard.vue";
 import Pagination from "../components/Pagination.vue";
+import Footer from "../components/Footer/index.vue";
 export default {
   components: {
     Breadcrumbs,
     QuestionBottom,
     YetuCard,
     Pagination,
+    Footer,
   },
 };
 </script>
