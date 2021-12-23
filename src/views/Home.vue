@@ -5,11 +5,6 @@
       class="slider-element home-slider mb-10"
       style="background-image: url('img/pexels-nappy-935985.d001a95e.jpg'); background-size: cover;"
     >
-      <!-- <img
-        src="@/assets/images/pexels-nappy-935985.jpg"
-        class="home-slider absolute top-0 left-0 bottom-0 w-full bg-cover"
-        alt=""
-      /> -->
       <div class="texture-overlay">
         <div class="texture-left">
           <img src="@/assets/images/zigzag-texture.png" />
